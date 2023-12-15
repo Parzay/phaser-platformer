@@ -15,3 +15,8 @@ export const restartDialog = document.getElementById("restart-dialog");
 export const scoreSpan = document.getElementById("score-span");
 /** @type {HTMLButtonElement} */ //@ts-ignore
 export const restartButton = document.getElementById("restart-button");
+
+/** @type {HTMLDialogElement} */ //@ts-ignore
+export const startDialog = document.getElementById("start-dialog");
+/** @type {HTMLButtonElement} */ //@ts-ignore
+export const startButton = document.getElementById("start-button");
