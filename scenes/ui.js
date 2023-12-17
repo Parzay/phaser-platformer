@@ -1,10 +1,10 @@
 //@ts-check
 import Phaser from "phaser";
-import { events, COIN_COLLECTED_EVENT } from "../constants";
+import { events, COIN_COLLECTED_EVENT, SCENE_KEYS } from "../constants";
 
 export class UiScene extends Phaser.Scene {
 	constructor() {
-		super("ui-scene");
+		super(SCENE_KEYS.ui);
 
 		this.scoreText;
 	}

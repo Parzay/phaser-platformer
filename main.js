@@ -4,6 +4,7 @@ import Phaser from "phaser";
 import { MainScene } from "./scenes/main";
 import { UiScene } from "./scenes/ui";
 import {
+	SCENE_KEYS,
 	restartButton,
 	restartDialog,
 	startButton,
@@ -19,7 +20,7 @@ const config = {
 	physics: {
 		default: "arcade",
 		arcade: {
-			gravity: { y: 300 },
+			gravity: { y: 500 },
 			//debug: true,
 		},
 	},
@@ -38,6 +39,6 @@ startDialog.addEventListener("close", startGame);
 startButton.addEventListener("click", startGame);
 
 restartButton.addEventListener("click", () => {
-	game.scene.start("main-scene");
+	game.scene.start(SCENE_KEYS.main);
 	restartDialog.close();
 });

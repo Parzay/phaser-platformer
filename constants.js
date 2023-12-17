@@ -20,3 +20,26 @@ export const restartButton = document.getElementById("restart-button");
 export const startDialog = document.getElementById("start-dialog");
 /** @type {HTMLButtonElement} */ //@ts-ignore
 export const startButton = document.getElementById("start-button");
+
+export const SCENE_KEYS = {
+	main: "main-scene",
+	ui: "ui-scene",
+};
+
+export const ASSET_KEYS = {
+	player: "robot",
+	coin: "coin",
+	enemy: "enemy",
+    map: "map",
+	tileset: {
+		marble: "marble",
+		rock: "rock",
+		sand: "sand",
+		stone: "stone",
+	},
+	audio: {
+		coin: "coin-noise",
+		jump: "jump-noise",
+		music: "music",
+	},
+};

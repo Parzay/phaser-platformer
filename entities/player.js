@@ -116,7 +116,7 @@ export class Player {
 			this.sprite.body.onFloor()
 		) {
 			this.jumpNoise.play();
-			this.sprite.setVelocityY(-300);
+			this.sprite.setVelocityY(-350);
 		}
 
 		let { x, y } = this.sprite.body.velocity;
