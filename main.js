@@ -360,4 +360,5 @@ const game = new Phaser.Game(config);
 restartButton.addEventListener("click", () => {
 	game.scene.start("main-scene");
 	restartDialog.close();
-});
+})
+;
