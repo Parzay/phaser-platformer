@@ -1,5 +1,7 @@
+//@ts-check
 import "./style.css";
 import Phaser from "phaser";
+<<<<<<< HEAD
 
 const TILE_SIZE = 18;
 const WIDTH = 88 * TILE_SIZE;
@@ -339,6 +341,17 @@ class MainScene extends Phaser.Scene {
 		restartDialog.showModal();
 	}
 }
+=======
+import { MainScene } from "./scenes/main";
+import { UiScene } from "./scenes/ui";
+import {
+	SCENE_KEYS,
+	restartButton,
+	restartDialog,
+	startButton,
+	startDialog,
+} from "./constants";
+>>>>>>> 91372812219f9141fd342090f23a0f041f2e00ee
 
 /** @type {Phaser.Types.Core.GameConfig} */
 const config = {
@@ -347,18 +360,27 @@ const config = {
 	height: window.innerHeight,
 	scene: [MainScene, UiScene],
 	physics: {
-		default: "arcade",
-		arcade: {
-			gravity: { y: 300 },
-			debug: true,
+		default: "arcade"zzx		arcade: {
+			gravity: { y: 500 },
+			//debug: true,
 		},
 	},
 };
 
 const game = new Phaser.Game(config);
+game.pause();
+
+function startGame() {
+	startDialog.close();
+	game.resume();
+}
+
+startDialog.showModal();
+startDialog.addEventListener("close", startGame);
+startButton.addEventListener("click", startGame);
 
 restartButton.addEventListener("click", () => {
-	game.scene.start("main-scene");
+	game.scene.start(SCENE_KEYS.main);
 	restartDialog.close();
 })
 ;
